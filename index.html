@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lodestone: Milestone Presentation</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Lodestone</h1>
+        <h2>Final UI Presentation</h2>
+        <br />
+        <h3>Jacob van der Eynden</h3>
+    </header>
+    <main>
+        <div class="writtencontainer">
+            <div class="uisection">
+                <h3>Final UI Links</h3>
+                    <p>Deployed application:</p>
+                    <p><a href="https://jroyvde.github.io/lodestone">https://jroyvde.github.io/lodestone</a></p>
+                    <p>GitHub repository:</p>
+                    <p><a href="https://github.com/jroyvde/lodestone">https://github.com/jroyvde/lodestone</a></p>
+                    <p>Cables patch (photo distortion):</p>
+                    <p><a href="https://cables.gl/edit/fz9YT0">https://cables.gl/edit/fz9YT0</a></p>
+                <h3>Reflection</h3>
+                    <p>The prompt I chose for my user interface design was spatial control. I interpreted this in terms of both illusory digital space, and real world physical space. The UI has three layers of depth, with navigation through the app being portrayed as moving deeper into the lodestone. The app is also controlled by the user's physical location in the real world. Depending on where the user is, their experience of all the locations inside the lodestone will be different, with closer locations appearing more clearly, and farther ones being distorted.</p>
+                    <p>The project's information design was inspired by Ryoji Ikeda's works, which depict inscrutable computer interfaces with maximalist data visualisation, and Petscop, which portrays various UIs with unclear purposes. I wanted to create an outward impression of an unknown or alien computer system, which would inwardly contain a somewhat cryptic account of some of the emotions and experiences I've had this year. Through this juxtaposition, I wanted to capture the complexity and mystery of a human mind, and the experience of getting to know someone.</p>
+                    <p>A very important variable in the app is the proximity value, which is assigned to each location in the app's map based on how physically close the user is to them. I deliberately chose to have the calculated proximity values be relative, interpolated evenly between 0% to 99%. This was to ensure that even users very far from any of the locations in the app would be able to have an interesting experience. Many aspects of the experience are mapped directly to this value; in particular, the levels of audio and visual distortion on the view screen. If the user is within a specific, close distance to a location, its proximity will increase to 100%, revealing a short line of text.</p>
+                    <p>Even though my app was designed to be ambiguous, it was still important to have a degree of learnability to set the user on the desired path. I worded the opening modal text in a way that suggests the user "take the app with them" on a mobile device. I chose 99% as the maximum proximity reachable by the relative proximity calculation to get the user wondering if they could get it to 100%. In doing this, I hoped to prompt the user to try getting as close as possible to the locations on the map, to unlock the hidden content.</p>
+                    <p>In terms of feedback, It was important to me that both the visuals and soundscape responded to the user's position and actions. The user's navigation through the lodestone is represented with zoom effects to signify spatial movement. I also wanted to make sure every user action had an associated sound effect. Taking advantage of Tone's features, I used higher pitched sounds for proceeding deeper, and lower tones for going back. The grinding sound of the lodestone also fades into the background as the user ventures deeper.</p>
+                    <p>Since initiating the project, I worked on it consistently for the first few weeks. I blocked out time to dedicate to progressing it, and used a Todoist project board to manage tasks. In late October, I flew out to Japan to participate in the Future Lives Studio. During the studio period, I had very few opportunities to work on Lodestone. With the studio wrapping up on Tuesday 21st, this gave me a little over a week to finish my other two projects for the semester.</p>
+                    <p>The app's core interaction design didn't change much from my prototype. Most of the work since has been focused on creating assets and adding locations. One major feature that I have added since the prototype is the visual distortions on the view screen. Having already used Cables in my studio project in Japan, I decided that it would be the most effective way for me to implement it. I did this by replacing the embedded image of the location photograph with an embedded Cables patch I created, which would output a distorted version of the image. My use of Cables was limited to this one element.</p>
+                    <p>There were many things I had originally planned that ultimately needed to be cut for time. The main one was the "easter eggs", additional interactive elements that would appear in different scenes. This was unfortunate, as these would have added another layer of interactions to encounter on the view screen. I also wanted to add a more spatial-looking transition animation between locations on the map screen, so the map would feel like a larger whole you were physically moving through. I also intended for the appearance of the outer lodestone to change depending on the user's actions inside, but this was also cut for time.</p>
+                    <p>The most challenging aspect of the project was trying to balance ambiguity with user engagement. While understanding and accepting that most users would not experience everything in the app, I still wanted it to be interesting even without seeing any of the hidden content. With more content, like the cut easter eggs, the app could have had content appear at varying degrees of proximity, with more and more things become accessible as you get closer to the location. With just the markers and their associated poems, there currently isn't much to interact with unless you go directly to one of the locations.</p>
+                    <p>In the end, I am proud of where I was able to get the project to in the allotted time, but look forward to continuing work on it after semester finishes. In particular, I'm proud of the navigation between different screens, as this is not something I've experimented with before. I'm also happy with my set-up of the data for the different locations. By storing places as objects with properties containing all relevant information, I was able to make the app modular and easily extensible with new locations and features.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
